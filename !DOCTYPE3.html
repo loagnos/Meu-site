@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Links</title>
+    <script>
+        function checkPassword() {
+            // Defina as duas senhas corretas
+            var correctPassword1 = "9091";  // Primeira senha
+            var correctPassword2 = "secret"; // Segunda senha
+
+            // Pegue a senha digitada pelo usuário
+            var userPassword = document.getElementById("password").value;
+
+            // Verifica se a primeira senha está correta
+            if (userPassword === correctPassword1) {
+                // Exibe a primeira lista de links
+                document.getElementById("secureLinks1").style.display = "block";
+                document.getElementById("secureLinks2").style.display = "none"; // Esconde a segunda lista, caso visível
+            }
+            // Verifica se a segunda senha está correta
+            else if (userPassword === correctPassword2) {
+                // Exibe a segunda lista de links
+                document.getElementById("secureLinks2").style.display = "block";
+                document.getElementById("secureLinks1").style.display = "none"; // Esconde a primeira lista, caso visível
+            } else {
+                // Exibe uma mensagem de erro se a senha estiver errada
+                alert("Senha incorreta! Tente novamente.");
+            }
+        }
+    </script>
+    <style>
+        /* Estilo minimalista preto e branco */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #000;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            width: 250px;
+            margin-bottom: 20px;
+            outline: none;
+            background-color: #fff;
+            color: #000;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        #secureLinks1, #secureLinks2 {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .link-item {
+            margin-bottom: 30px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .link-item img {
+            width: 180px;
+            height: auto;
+            border-radius: 10px;
+            filter: grayscale(100%); /* Imagem preto e branco */
+        }
+
+        .link-item a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .link-item a:hover {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Acesso Protegido</h2>
+    <p>Insira a senha para acessar a lista de sites:</p>
+
+    <input type="password" id="password" placeholder="Digite a senha" required>
+    <br>
+    <button onclick="checkPassword()">Verificar</button>
+
+    <!-- Primeira lista de links (senha: 9091) -->
+    <div id="secureLinks1">
+        <h3>Links Seguros - Conjunto 1:</h3>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TgZ1OAHSGYkHqxcxoNWLuD9SqbotqVTdP0M" alt="Imagem do Site 1">
+            <a href="https://happyhentai.to/albums?id=5027" target="_blank">Site 1</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TuMsqgbCaYkHqxcxoNWLuD9SqbotqVTdP50" alt="Imagem do Site 2">
+            <a href="https://happyhentai.to/albums?id=4709" target="_blank">Site 2</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TlYnNsyyP4kHqxcxoNWLuD9SqbotqVTdPzw" alt="Imagem do Site 3">
+            <a href="https://happyhentai.to/albums?id=4708" target="_blank">Site 3</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TgvQGqQMNokHqxcxoNWLuD9SqbotqVTdPwM" alt="Imagem do Site 4">
+            <a href="https://happyhentai.to/albums?id=5398" target="_blank">Site 4</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TlIMghBbIokHqxcxoNWLuD9SqbotqVTdP0Y" alt="Imagem do Site 5">
+            <a href="https://happyhentai.to/albums?id=3423" target="_blank">Site 5</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TqJbazn004kHqxcxoNWLuD9SqbotqVTdP4Q" alt="Imagem do Site 6">
+            <a href="https://happyhentai.to/albums?id=5380" target="_blank">Site 6</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TgvQGqQMNokHqxcxoNWLuD9SqbotqVTdPwM" alt="Imagem do Site 7">
+            <a href="https://happyhentai.to/albums?id=5398" target="_blank">Site 7</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TogfHkEoU4kHqxcxoNWLuD9SqbotqVTdPyw" alt="Imagem do Site 8">
+            <a href="https://happyhentai.to/albums?id=5371" target="_blank">Site 8</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=Tjyyc3CwWIkHqxcxoNWLuD9SqbotqVTdP.I" alt="Imagem do Site 9">
+            <a href="https://happyhentai.to/albums?id=5115" target="_blank">Site 9</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TlkAQRKuJIkHqxcxoNWLuD9SqbotqVTdP1Y" alt="Imagem do Site 10">
+            <a href="https://happyhentai.to/albums?id=5011" target="_blank">Site 10</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TjybM5RShYkHqxcxoNWLuD9SqbotqVTdP2M" alt="Imagem do Site 11">
+            <a href="https://happyhentai.to/albums?id=4756" target="_blank">Site 11</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=TnzKIXJVfokHqxcxoNWLuD9SqbotqVTdP.Y" alt="Imagem do Site 12">
+            <a href="https://happyhentai.to/albums?id=4185" target="_blank">Site 12</a>
+        </div>
+        <div class="link-item">
+            <img src="https://www.bing.com/images/blob?bcid=snBNw79uaYkHsA" alt="Imagem do Site 13">
+            <a href="https://happyhentai.to/albums?id=3946" target="_blank">Site 13</a>
+        </div>
+    </div>
+</body>
+</html>
+  
